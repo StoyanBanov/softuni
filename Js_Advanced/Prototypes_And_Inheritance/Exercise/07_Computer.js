@@ -3,6 +3,11 @@ function createComputerHierarchy() {
         constructor(manufacturer) {
             this.manufacturer = manufacturer
         }
+
+        static validate(instance, of) {
+            if (!(instance instanceof of))
+                throw new TypeError()
+        }
     }
 
     class Keyboard extends Device {
@@ -46,8 +51,7 @@ function createComputerHierarchy() {
             this.weight = weight
             this.color = color
 
-            if (!(battery instanceof Battery))
-                throw new TypeError()
+            Device.validate(battery, Battery)
             this._battery = battery
         }
 
@@ -56,9 +60,7 @@ function createComputerHierarchy() {
         }
 
         set battery(val) {
-            if (!(val instanceof Battery))
-                throw new TypeError()
-
+            Device.validate(val, Battery)
             this._battery = val
         }
     }
@@ -67,9 +69,10 @@ function createComputerHierarchy() {
         constructor(manufacturer, processorSpeed, ram, hardDiskSpace, keyboard, monitor) {
             super(manufacturer, processorSpeed, ram, hardDiskSpace)
 
-            if (!(keyboard instanceof Keyboard) || !(monitor instanceof Monitor))
-                throw new TypeError()
+            Device.validate(keyboard, Keyboard)
             this._keyboard = keyboard
+
+            Device.validate(monitor, Monitor)
             this._monitor = monitor
         }
 
@@ -78,9 +81,7 @@ function createComputerHierarchy() {
         }
 
         set keyboard(val) {
-            if (!(val instanceof Keyboard))
-                throw new TypeError()
-
+            Device.validate(val, Keyboard)
             this._keyboard = val
         }
 
@@ -90,9 +91,7 @@ function createComputerHierarchy() {
         }
 
         set monitor(val) {
-            if (!(val instanceof Monitor))
-                throw new TypeError()
-
+            Device.validate(val, Monitor)
             this._monitor = val
         }
     }
