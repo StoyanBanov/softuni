@@ -1,0 +1,17 @@
+{
+  "type": "module",
+  "name": "exercise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "13_String_Builder.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^5.0.0",
+    "mocha": "^10.2.0"
+  }
+}
