@@ -1,0 +1,1 @@
+arr => arr.sort((a, b) => a - b).slice(Math.floor(arr.length / 2))

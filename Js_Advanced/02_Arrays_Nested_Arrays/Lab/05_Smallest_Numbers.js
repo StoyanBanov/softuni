@@ -1,0 +1,1 @@
+arr => console.log((a = Math.min(...arr)), Math.min(...arr.filter((_, i) => i != arr.indexOf(a))))

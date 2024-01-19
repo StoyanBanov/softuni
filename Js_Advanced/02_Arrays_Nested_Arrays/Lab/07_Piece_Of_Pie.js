@@ -1,0 +1,1 @@
+(arr, p1, p2) => arr.slice(arr.indexOf(p1), arr.indexOf(p2) + 1)

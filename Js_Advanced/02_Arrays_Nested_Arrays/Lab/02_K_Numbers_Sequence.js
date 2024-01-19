@@ -1,4 +1,4 @@
-console.log(((n, k) => new Array(n)
+(n, k) => new Array(n)
     .fill(null)
     .reduce((arr, _, i) => {
         arr[i] = i > 0
@@ -7,4 +7,4 @@ console.log(((n, k) => new Array(n)
             : 1
 
         return arr
-    }, new Array(n)))(8, 2))
+    }, new Array(n))

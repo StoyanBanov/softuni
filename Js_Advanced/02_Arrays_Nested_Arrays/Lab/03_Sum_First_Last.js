@@ -1,0 +1,1 @@
+(arr) => Number(arr[0]) + Number(arr.pop())
