@@ -1,4 +1,12 @@
 function fromJSONToHTMLTable(input) {
+    const replaceVals = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        ' ': '&nbsp;',
+    }
+
     input = JSON.parse(input)
 
     const rows = ['<table>']
@@ -19,10 +27,6 @@ function fromJSONToHTMLTable(input) {
     function escape(str) {
         if (typeof str != 'string') return str
 
-        return str.replace(/&/g, '&amp;')
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;')
-            .replace(/"/g, '&quot;')
-            .replace(/ /g, '&nbsp;')
+        return str.replace(/[&<> "]/g, v => replaceVals[v])
     }
 }
