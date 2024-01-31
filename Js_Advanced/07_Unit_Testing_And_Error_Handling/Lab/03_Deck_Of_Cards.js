@@ -26,5 +26,3 @@ function printDeck(params) {
         }
     }
 }
-
-printDeck(['5S', '3D', 'QD', '1C'])
