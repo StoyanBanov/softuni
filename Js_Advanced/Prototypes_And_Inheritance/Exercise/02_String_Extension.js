@@ -41,32 +41,3 @@
         return result
     }
 })()
-
-let str = 'my string';
-console.log((str = str.ensureStart('my')));
-console.log(''.truncate(6));
-
-console.log((str = str.ensureStart('hello ')));
-
-str = str.truncate(16);
-console.log(str);
-
-str = str.truncate(14);
-console.log(str);
-
-str = str.truncate(8);
-console.log(str);
-
-str = str.truncate(4);
-console.log(str);
-
-console.log(str = str.truncate(2));
-
-str = String.format('The {0} {1} fox',
-    'quick', 'brown');
-console.log(str);
-
-str = String.format('jumps {0} {1}',
-    'dog');
-
-console.log(str);
