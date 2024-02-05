@@ -1,4 +1,5 @@
-import { expect } from "chai"
+import { expect } from "chai";
+
 
 function isOddOrEven(string) {
     if (typeof (string) !== 'string') {
