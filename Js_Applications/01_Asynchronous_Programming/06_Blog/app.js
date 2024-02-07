@@ -47,13 +47,12 @@ function attachEvents() {
 }
 
 
-//version for judje
+// version for judge
 
 // function attachEvents() {
 //     const postsSelect = document.getElementById('posts'),
 //         postH1 = document.getElementById('post-title'),
 //         postP = document.getElementById('post-body'),
-//         commentsUl = document.getElementById('post-comments'),
 //         host = 'http://localhost:3030/jsonstore/blog'
 
 //     let posts
@@ -68,10 +67,10 @@ function attachEvents() {
 //     })
 
 //     document.getElementById('btnViewPost').addEventListener('click', async () => {
-//         const post = await get('/posts/' + postsSelect.value)
+//         const post = posts.find(p => p.id == postsSelect.value)
 
-//         postH1.textContent = post[0].title
-//         postP.textContent = post[0].body
+//         postH1.textContent = post.title
+//         postP.textContent = post.body
 //     })
 
 //     function makePostOption(value, text) {
@@ -79,12 +78,6 @@ function attachEvents() {
 //         option.value = value
 //         option.text = text
 //         return option
-//     }
-
-//     function makeCommentLi(text) {
-//         const li = document.createElement('li')
-//         li.textContent = text
-//         return li
 //     }
 
 //     async function get(url) {
